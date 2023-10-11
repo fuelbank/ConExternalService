@@ -10,7 +10,7 @@ module.exports = cds.service.impl(async function() {
     this.on('READ', 'Suppliers', async req => {
         return bupa.run(req.query);
     });
-
+ 
 
 
     this.after('READ', 'Risks', risksData => {
