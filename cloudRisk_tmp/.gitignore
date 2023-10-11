@@ -1,6 +1,7 @@
 # CAP cpapp
 _out
 *.db
+*.env
 connection.properties
 default-*.json
 gen/
