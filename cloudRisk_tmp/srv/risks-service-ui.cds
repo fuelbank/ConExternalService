@@ -109,3 +109,33 @@ annotate RiskService.Suppliers with {
     isBlocked   @title: 'Supplier Blocked';
 }
 
+// Annotations for value help
+
+annotate RiskService.Risks with {
+    supplier @(
+        Common.ValueList: {
+            Label: 'Suppliers',
+            CollectionPath: 'Suppliers',
+            Parameters: [
+                { $Type: 'Common.ValueListParameterInOut',
+                    LocalDataProperty: supplier_ID,
+                    ValueListProperty: 'ID'
+                },
+                { $Type: 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'fullName'
+                }
+            ]
+        }
+    );
+}
+
+annotate RiskService.Suppliers with {
+    ID          @(
+        title: 'ID',
+        Common.Text: fullName
+    );
+    fullName    @title: 'Name';
+}
+
+annotate RiskService.Suppliers with @Capabilities.SearchRestrictions.Searchable : false;
+
