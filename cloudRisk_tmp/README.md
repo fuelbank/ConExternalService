@@ -1,4 +1,37 @@
 # Welcome     
+add to readme
+
+Step1_addrisk
+  Add Supplier to Risks entity
+  supplier    : Association to Suppliers;
+    //This managed association adds a property supplier_ID to the Risks entity under the hood, so that the key and the ID field of the supplier can be stored.
+	
+   new csv file for risks with supplier_id 
+
+
+   
+
+Step2_servicejs  for expand
+     code for expand url
+	 
+	 
+Step3_annotations
+    step1 risks were added to entity but not to annotations/UI. Now its added so we see in UI
+	UI for list
+	UI for object page 
+	annotate friendly name for isblocked field 
+	 note how instead of supplier id ..everywhere supplier name is displayed. even in list and object    
+step4_valuehelp
+   valeushelp added to supplier field 
+    note how instead of supplier id ..everywhere supplier name is displayed. even in list and object    
+
+
+
+
+
+
+
+   
 
 Welcome to this tutorial for application development on SAP Business Technology Platform (SAP BTP). We provide information and examples on how to develop and deploy an application based on [SAP Cloud Application Programming Model (CAP)](https://cap.cloud.sap/) on SAP BTP using different tools and services step by step.
 
