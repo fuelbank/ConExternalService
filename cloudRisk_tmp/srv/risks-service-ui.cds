@@ -6,6 +6,14 @@ annotate RiskService.Risks with {
 	descr       @title: 'Description';
 	miti        @title: 'Mitigation';
 	impact      @title: 'Impact';
+
+	supplier    @(
+        title: 'Supplier',
+        Common.Text: supplier.fullName,
+        Common.TextArrangement: #TextOnly
+    )
+
+
 }
 
 annotate RiskService.Mitigations with {
@@ -64,7 +72,9 @@ annotate RiskService.Risks with @(
 				{
 					Value: impact,
 					Criticality: criticality
-				}
+				},
+				 {Value: supplier_ID},
+                {Value: supplier.isBlocked},
 			]
 		}
 	},
@@ -93,3 +103,9 @@ annotate RiskService.Risks with {
 		}
 	);
 }
+
+
+annotate RiskService.Suppliers with {
+    isBlocked   @title: 'Supplier Blocked';
+}
+
